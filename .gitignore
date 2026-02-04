@@ -9,3 +9,5 @@ __pycache__/
 # Django database (optional: keep or ignore)
 db.sqlite3
 EOF
+/connectly_project/connectly_site/migrations
+/venv
