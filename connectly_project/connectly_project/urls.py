@@ -16,10 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from connectly_site.views import CreateNewUser, GetUserList
+from connectly_site.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/create', CreateNewUser.as_view(), name = "New User"),
-    path('users/', GetUserList.as_view(), name = "User List")
+    path('users/', GetUserList.as_view(), name = "User List"),
+    path('login/', UserLogin.as_view(), name = "Login"),
+    path('posts/', PostListCreate.as_view()),
+    path('posts/<int:pk>', PostRetrieveUpdateDestroy.as_view()),
+    path('comments/', CommentListCreate.as_view())
 ]

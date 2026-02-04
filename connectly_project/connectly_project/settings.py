@@ -137,8 +137,3 @@ PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
 ]
-
-
-#Custom User Model
-
-##AUTH_USER_MODEL = "connectly_site.User"

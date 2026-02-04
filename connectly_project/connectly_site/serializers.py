@@ -4,12 +4,14 @@ from .models import User, Post, Comment
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'username', 'email', 'created_at', 'password']
+        fields = ['id', 'username', 'email', 'created_at', 'password', 'is_staff', 'is_superuser']
 
-    def save(self, _username, _password, _email):
+    def save(self, _username, _password, _email, _is_staff, _is_superuser):
         self.username = _username
         self.password = _password
         self.email = _email
+        self.is_staff = _is_staff
+        self.is_superuser = _is_superuser
 
 
 class PostSerializer(serializers.ModelSerializer):
