@@ -71,7 +71,7 @@ connectly_project/
 │   ├── urls.py
 │   ├── views.py
 │   └── tests.py
-├── env/                # virtual environment (DO NOT COMMIT)
+├── env/                # virtual environment
 ├── db.sqlite3          # database (optional to commit)
 ├── manage.py
 └── README.md
@@ -79,4 +79,4 @@ connectly_project/
 
 ### Author
 ```md
-Laiza Veronica Llanto
+Group 10
