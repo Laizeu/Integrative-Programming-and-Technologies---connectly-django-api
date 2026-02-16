@@ -33,7 +33,7 @@ This project demonstrates basic CRUD operations and was tested using Postman.
    python3 manage.py runserver
 
 ## API Endpoints
-Base URL: http://127.0.0.1:PORT
+https://127.0.0.1:8000
 
 ## Users
 GET /posts/users/
@@ -51,6 +51,16 @@ POST /posts/posts/create/
 {"content":"Hello this is Laiza's first post!","author":1}
 ```
 
+## Comments
+GET /posts/comments/
+POST /posts/comments/
+```bash
+{
+  "text": "This is a comment by Laiza",
+  "author": 1,
+  "post": 1
+}
+```
 
 ## File Structure
 ```text
@@ -71,12 +81,12 @@ connectly_project/
 │   ├── urls.py
 │   ├── views.py
 │   └── tests.py
-├── env/                # virtual environment (DO NOT COMMIT)
-├── db.sqlite3          # database (optional to commit)
+├── env/                # virtual environment
+├── db.sqlite3          # database 
 ├── manage.py
 └── README.md
 ```
 
 ### Author
 ```md
-Laiza Veronica Llanto
+IPT Group 10
