@@ -241,7 +241,7 @@ connectly_project/
 ├── manage.py               # Django management script
 └── README.md
 ```
-## System Architecture Diagram
+## Updated Diagrams
 - https://drive.google.com/drive/folders/19loZ9dVJfG5qvpoIXgrr7_g7wR5TU5t-?usp=sharing
 
 ## Requirements
