@@ -1,11 +1,39 @@
 # Connectly Django API
 
+## Project Branch
+
+The **final and latest tested version** of this project is located in the branch:
+
+**Milestone-2**
+
+All features for Milestone 2 (Likes, Comments, Google OAuth integration, and News Feed with sorting and pagination) were consolidated, merged, committed, and pushed to this branch.
+
+To use the latest version of the project:
+
+```bash
+git checkout Milestone-2
+```
+
+
+# AI Disclosure Statement
+
+```markdown
+AI tools (such as ChatGPT) were used to assist with documentation formatting, explanation of concepts, and guidance for testing API endpoints.  
+
+All system design, implementation, testing, and integration of features (CRUD operations, validation, relationships, security, design patterns, likes, comments, Google OAuth, and news feed functionality) were implemented and verified by the project team.
+```
+
 Connectly Django API is a backend REST API built with Django for managing users and posts. The project demonstrates core backend development concepts including CRUD operations, validation, relational data handling, API security, and scalable design patterns.
 
 The API has been extended with social interaction features such as likes and comments, Google OAuth authentication, and a personalized news feed with sorting and pagination.
 
 The endpoints were tested using Postman.
 
+## Project Overview
+
+Connectly is a simplified social media backend API that allows users to create posts, interact through likes and comments, authenticate using Google OAuth, and view a personalized news feed.
+
+The project demonstrates key backend engineering concepts including REST API design, database relationships, authentication, security, pagination, and scalable architecture patterns.
 
 ## Features
 ### Core API Features
@@ -75,16 +103,16 @@ Tools
 
 ## API Endpoints
 
-### Base
+### Base URL
 ```test
-- https://127.0.0.1:8000
+- http://127.0.0.1:8000
 ```
 ### Users
 ```text
 - GET /posts/users/
 - POST /posts/users/create/
 ```
-```bash
+```json
 {"username":"laiza","email":"laiza@example.com"}.
 ```
 ### Posts
@@ -92,7 +120,7 @@ Tools
 - GET /posts/posts/                                   # Retrieve all posts
 - POST /posts/posts/create                            # Create a new post
 ```
-```bash
+```json
 {"content":"Hello this is Laiza's first post!","author":1}
 ```
 ### Likes
@@ -101,10 +129,10 @@ Tools
 ```
 ### Comments
 ```text
-- POST http://127.0.0.1:8000/posts/7/comment/          # Add comment to a post
-- GET http://127.0.0.1:8000/posts/1/comments/          # Retrieve comments for a post
+- POST /posts/{id}/comment/      # Add comment to a post
+- GET /posts/{id}/comments/      # Retrieve comments for a post
 ```
-```bash
+```json
 {
   "text": "This is a comment by Laiza",
   "author": 1,
@@ -125,6 +153,23 @@ Tools
 - GET   /posts/feed/?page=1                  # Pagination (page 1)
 - GET   /posts/feed/?page=2                  # Pagination (page 2)
 ```
+## Testing
+
+All API endpoints were tested using **Postman**.
+
+The following features were tested:
+
+- Token authentication
+- News feed retrieval
+- Post sorting
+- Pagination
+- Personalized feed filtering
+- Like interactions
+- Comment interactions
+- Error handling
+- Google OAuth authentication
+
+Both successful and error scenarios were verified.
 
 ## File Structure
 ```text
@@ -154,6 +199,11 @@ connectly_project/
 ├── manage.py               # Django management script
 └── README.md
 ```
+
+## Project Status
+
+Milestone 2 – Completed  
+Includes Likes, Comments, Google OAuth authentication, and News Feed with sorting and pagination.
 
 ### Author
 ```md
