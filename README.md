@@ -73,29 +73,31 @@ The endpoints were tested using Postman.
 
 ## Base
 - https://127.0.0.1:8000
-
 ## Users
+```text
 - GET /posts/users/
 - POST /posts/users/create/
-
+```
 ```bash
 {"username":"laiza","email":"laiza@example.com"}.
 ```
-
 ## Posts
+```text
 - GET /posts/posts/
 - POST /posts/posts/create/
-
+```
 ```bash
 {"content":"Hello this is Laiza's first post!","author":1}
 ```
-
 ## Likes
+```text
 - POST  http://127.0.0.1:8000/posts/7/like/            # Like a post
-
+```
 ## Comments
+```text
 - POST http://127.0.0.1:8000/posts/7/comment/          # Add comment to a post
 - GET http://127.0.0.1:8000/posts/1/comments/          # Retrieve comments for a post
+```
 ```bash
 {
   "text": "This is a comment by Laiza",
@@ -104,16 +106,19 @@ The endpoints were tested using Postman.
 }
 ```
 ## Authentication
+```text
 - POST  /api/token/                          # Request authentication token
 - POST  /auth/google/login/                  # Google OAuth login
 - GET   /accounts/google/login/              # Start Google OAuth login
 - GET   /accounts/google/login/callback/     # Google OAuth callback
-
+```
 ## News Feed
+```text
 - GET   /posts/feed/                         # Retrieve personalized news feed
 - GET   /posts/feed/?ordering=-created_at    # Sort posts by newest
 - GET   /posts/feed/?page=1                  # Pagination (page 1)
 - GET   /posts/feed/?page=2                  # Pagination (page 2)
+```
 
 ## File Structure
 ```text
