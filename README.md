@@ -1,33 +1,28 @@
 # Connectly Django API
-
-## Project Branch
-
-The **final and latest tested version** of this project is located in the branch:
-
-**Milestone-2**
-
-All features for Milestone 2 (Likes, Comments, Google OAuth integration, and News Feed with sorting and pagination) were consolidated, merged, committed, and pushed to this branch.
-
-To use the latest version of the project:
-
-```bash
-git checkout Milestone-2
-```
-
-
-# AI Disclosure Statement
-
-```markdown
-AI tools (such as ChatGPT) were used to assist with documentation formatting, explanation of concepts, and guidance for testing API endpoints.  
-
-All system design, implementation, testing, and integration of features (CRUD operations, validation, relationships, security, design patterns, likes, comments, Google OAuth, and news feed functionality) were implemented and verified by the project team.
-```
+Backend REST API for a social media platform built with Django and Django REST Framework.
 
 Connectly Django API is a backend REST API built with Django for managing users and posts. The project demonstrates core backend development concepts including CRUD operations, validation, relational data handling, API security, and scalable design patterns.
 
 The API has been extended with social interaction features such as likes and comments, Google OAuth authentication, and a personalized news feed with sorting and pagination.
 
 The endpoints were tested using Postman.
+
+## Project Branch
+The **final and latest tested version** of this project is located in the branch:
+**Milestone-2**
+All features for Milestone 2 (Likes, Comments, Google OAuth integration, and News Feed with sorting and pagination) were consolidated, merged, committed, and pushed to this branch.
+
+To use the latest version of the project:
+```bash
+git checkout Milestone-2
+```
+
+```markdown
+# AI Disclosure Statement
+AI tools (such as ChatGPT) were used to assist with documentation formatting, explanation of concepts, and guidance for testing API endpoints.  
+
+All system design, implementation, testing, and integration of features (CRUD operations, validation, relationships, security, design patterns, likes, comments, Google OAuth, and news feed functionality) were implemented and verified by the project team.
+```
 
 ## Project Overview
 
@@ -104,16 +99,18 @@ Tools
 ## API Endpoints
 
 ### Base URL
-```test
-- http://127.0.0.1:8000
+```markdown
+### Base URL
+http://127.0.0.1:8000
 ```
+
 ### Users
 ```text
 - GET /posts/users/
 - POST /posts/users/create/
 ```
 ```json
-{"username":"laiza","email":"laiza@example.com"}.
+{"username":"laiza","email":"laiza@example.com"}
 ```
 ### Posts
 ```text
@@ -146,6 +143,26 @@ Tools
 - GET   /accounts/google/login/              # Start Google OAuth login
 - GET   /accounts/google/login/callback/     # Google OAuth callback
 ```
+### Example Token Request
+POST /api/token/
+
+Request Body
+```json
+{
+  "username": "laiza",
+  "password": "yourpassword"
+}
+```
+Response
+```json
+{
+  "access": "your_access_token",
+  "refresh": "your_refresh_token"
+}
+```
+Authenticated requests must include the token in the header:
+Authorization: Bearer <access_token>
+
 ### News Feed
 ```text
 - GET   /posts/feed/                         # Retrieve personalized news feed
@@ -153,6 +170,31 @@ Tools
 - GET   /posts/feed/?page=1                  # Pagination (page 1)
 - GET   /posts/feed/?page=2                  # Pagination (page 2)
 ```
+Example Feed Request
+```markdown
+### Example News Feed Request
+GET /posts/feed/?page=1&ordering=-created_at
+Returns a paginated list of posts ordered by newest first.
+```
+Example Feed Response
+```json
+{
+  "count": 5,
+  "next": "http://127.0.0.1:8000/posts/feed/?page=2",
+  "previous": null,
+  "results": [
+    {
+      "id": 7,
+      "content": "Hello this is Laiza's first post!",
+      "author": "laiza",
+      "created_at": "2026-03-05T10:30:00Z",
+      "like_count": 2,
+      "comment_count": 1
+    }
+  ]
+}
+```
+
 ## Testing
 
 All API endpoints were tested using **Postman**.
@@ -199,6 +241,16 @@ connectly_project/
 ├── manage.py               # Django management script
 └── README.md
 ```
+## System Architecture Diagram
+- https://drive.google.com/drive/folders/19loZ9dVJfG5qvpoIXgrr7_g7wR5TU5t-?usp=sharing
+
+## Requirements
+
+- Python 3.10+
+- Django
+- Django REST Framework
+- django-allauth (Google OAuth)
+- SQLite (development database)
 
 ## Project Status
 
