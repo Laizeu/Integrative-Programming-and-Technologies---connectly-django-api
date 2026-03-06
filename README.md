@@ -34,16 +34,16 @@ The endpoints were tested using Postman.
 - Pagination support for efficient data retrieval
 
 ## Tech Stack
-### Backend Framework
+Backend Framework
 - Django
-### API Framework
+API Framework
 - Django REST Framework
-### Authentication
+Authentication
 - Google OAuth
 - Django authentication system
-### Database
+Database
 - SQLite (development)
-### Tools
+Tools
 - Postman (API testing)
 
 ## Setup & Run
