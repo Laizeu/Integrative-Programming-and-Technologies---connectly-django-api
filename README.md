@@ -36,13 +36,17 @@ The endpoints were tested using Postman.
 ## Tech Stack
 Backend Framework
 - Django
+- 
 API Framework
 - Django REST Framework
+
 Authentication
 - Google OAuth
 - Django authentication system
+  
 Database
 - SQLite (development)
+
 Tools
 - Postman (API testing)
 
