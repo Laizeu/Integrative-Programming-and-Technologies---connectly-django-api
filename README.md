@@ -7,6 +7,7 @@ The API has been extended with social interaction features such as likes and com
 
 The endpoints were tested using Postman.
 
+
 ## Project Branch
 The **final and latest tested version** of this project is located in the branch:
 **Milestone-2**
@@ -24,11 +25,13 @@ AI tools (such as ChatGPT) were used to assist with documentation formatting, ex
 All system design, implementation, testing, and integration of features (CRUD operations, validation, relationships, security, design patterns, likes, comments, Google OAuth, and news feed functionality) were implemented and verified by the project team.
 ```
 
+
 ## Project Overview
 
 Connectly is a simplified social media backend API that allows users to create posts, interact through likes and comments, authenticate using Google OAuth, and view a personalized news feed.
 
 The project demonstrates key backend engineering concepts including REST API design, database relationships, authentication, security, pagination, and scalable architecture patterns.
+
 
 ## Features
 ### Core API Features
@@ -56,6 +59,7 @@ The project demonstrates key backend engineering concepts including REST API des
 - Sorting posts by date
 - Pagination support for efficient data retrieval
 
+
 ## Tech Stack
 Backend Framework
 - Django
@@ -72,6 +76,7 @@ Database
 
 Tools
 - Postman (API testing)
+
 
 ## Setup & Run
 1. Clone the repo 
@@ -96,6 +101,7 @@ Tools
    python3 manage.py runserver_plus --cert-file cert.pem --key-file key.pem
    ```
 
+
 ## API Endpoints
 
 ### Base URL
@@ -103,8 +109,8 @@ Tools
 
 ### Users
 ```text
-- GET /posts/users/
-- POST /posts/users/create/
+- GET /posts/users/                                 # Retrieve all users
+- POST /posts/users/create/                         # Create a new user
 ```
 Sample Request Body
 ```json
