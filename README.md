@@ -99,38 +99,70 @@ Tools
 ## API Endpoints
 
 ### Base URL
-```markdown
-### Base URL
-http://127.0.0.1:8000
-```
+`http://127.0.0.1:8000`
 
 ### Users
 ```text
 - GET /posts/users/
 - POST /posts/users/create/
 ```
+Sample Request Body
 ```json
-{"username":"laiza","email":"laiza@example.com"}
+{"username":"laizallanto","email":"laiza@gmail.com"}
+```
+Sample Response
+```json
+
+{
+  "id": 1,
+  "username": "laiza",
+  "email": "laiza@example.com"
+}
 ```
 ### Posts
 ```text
 - GET /posts/posts/                                   # Retrieve all posts
 - POST /posts/posts/create                            # Create a new post
 ```
+Sample Request Body
 ```json
 {"content":"Hello this is Laiza's first post!","author":1}
+```
+Sample Response
+```json
+{
+  "id": 1,
+  "content": "Hello this is Laiza's first post!",
+  "author": 1
+}
 ```
 ### Likes
 ```text
 - POST  /posts/{id}/like/                              # Like a post
+```
+Sample Response
+```json
+{
+  "message": "Post liked successfully"
+}
 ```
 ### Comments
 ```text
 - POST /posts/{id}/comment/      # Add comment to a post
 - GET /posts/{id}/comments/      # Retrieve comments for a post
 ```
+Sample Request Body
 ```json
 {
+  "text": "This is a comment by Laiza",
+  "author": 1,
+  "post": 1
+}
+```
+Sample Response
+```json
+{
+  "id": 1,
   "text": "This is a comment by Laiza",
   "author": 1,
   "post": 1
@@ -170,10 +202,9 @@ Authorization: Bearer <access_token>
 - GET   /posts/feed/?page=1                  # Pagination (page 1)
 - GET   /posts/feed/?page=2                  # Pagination (page 2)
 ```
-Example Feed Request
 ```markdown
 ### Example News Feed Request
-GET /posts/feed/?page=1&ordering=-created_at
+`GET /posts/feed/?page=1&ordering=-created_at`
 Returns a paginated list of posts ordered by newest first.
 ```
 Example Feed Response
