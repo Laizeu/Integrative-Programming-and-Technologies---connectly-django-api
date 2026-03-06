@@ -250,6 +250,17 @@ The following features were tested:
 
 Both successful and error scenarios were verified.
 
+### Test Evidence
+
+Screenshots and exported Postman collections for the tests can be found here:
+
+Testing Documentation:
+https://drive.google.com/drive/folders/15M2JXmP4iMxHy9ockM1mgprdcnJslNAh?usp=sharing
+
+Contents include:
+- Postman API request/response screenshots
+- Exported JSON Postman Collention file
+
 ## File Structure
 ```text
 connectly_project/
