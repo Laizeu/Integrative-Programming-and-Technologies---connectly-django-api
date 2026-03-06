@@ -35,16 +35,16 @@ The endpoints were tested using Postman.
 
 ## Tech Stack
 ### Backend Framework
-Django
+- Django
 ### API Framework
-Django REST Framework
+- Django REST Framework
 ### Authentication
-Google OAuth
-Django authentication system
+- Google OAuth
+- Django authentication system
 ### Database
-SQLite (development)
+- SQLite (development)
 ### Tools
-Postman (API testing)
+- Postman (API testing)
 
 ## Setup & Run
 1. Clone the repo 
@@ -60,39 +60,42 @@ Postman (API testing)
    ```bash
    python3 manage.py migrate
 5. Start server
-Standard server
+   - Standard server
    ```bash
    python3 manage.py runserver
-HTTPS server
+   ```
+   - HTTPS server
    ``` bash
    python3 manage.py runserver_plus --cert-file cert.pem --key-file key.pem
    ```
 
 ## API Endpoints
-https://127.0.0.1:8000
+
+## Base
+- https://127.0.0.1:8000
 
 ## Users
-GET /posts/users/
-POST /posts/users/create/
+- GET /posts/users/
+- POST /posts/users/create/
 
 ```bash
 {"username":"laiza","email":"laiza@example.com"}.
 ```
 
 ## Posts
-GET /posts/posts/
-POST /posts/posts/create/
+- GET /posts/posts/
+- POST /posts/posts/create/
 
 ```bash
 {"content":"Hello this is Laiza's first post!","author":1}
 ```
 
 ## Likes
-POST  http://127.0.0.1:8000/posts/7/like/            # Like a post
+- POST  http://127.0.0.1:8000/posts/7/like/            # Like a post
 
 ## Comments
-POST http://127.0.0.1:8000/posts/7/comment/          # Add comment to a post
-GET http://127.0.0.1:8000/posts/1/comments/          # Retrieve comments for a post
+- POST http://127.0.0.1:8000/posts/7/comment/          # Add comment to a post
+- GET http://127.0.0.1:8000/posts/1/comments/          # Retrieve comments for a post
 ```bash
 {
   "text": "This is a comment by Laiza",
@@ -101,16 +104,16 @@ GET http://127.0.0.1:8000/posts/1/comments/          # Retrieve comments for a p
 }
 ```
 ## Authentication
-POST  /api/token/                          # Request authentication token
-POST  /auth/google/login/                  # Google OAuth login
-GET   /accounts/google/login/              # Start Google OAuth login
-GET   /accounts/google/login/callback/     # Google OAuth callback
+- POST  /api/token/                          # Request authentication token
+- POST  /auth/google/login/                  # Google OAuth login
+- GET   /accounts/google/login/              # Start Google OAuth login
+- GET   /accounts/google/login/callback/     # Google OAuth callback
 
 ## News Feed
-GET   /posts/feed/                         # Retrieve personalized news feed
-GET   /posts/feed/?ordering=-created_at    # Sort posts by newest
-GET   /posts/feed/?page=1                  # Pagination (page 1)
-GET   /posts/feed/?page=2                  # Pagination (page 2)
+- GET   /posts/feed/                         # Retrieve personalized news feed
+- GET   /posts/feed/?ordering=-created_at    # Sort posts by newest
+- GET   /posts/feed/?page=1                  # Pagination (page 1)
+- GET   /posts/feed/?page=2                  # Pagination (page 2)
 
 ## File Structure
 ```text
