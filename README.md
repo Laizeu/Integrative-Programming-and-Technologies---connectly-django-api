@@ -202,7 +202,6 @@ Authorization: Bearer <access_token>
 - GET   /posts/feed/?page=1                  # Pagination (page 1)
 - GET   /posts/feed/?page=2                  # Pagination (page 2)
 ```
-```markdown
 ### Example News Feed Request
 `GET /posts/feed/?page=1&ordering=-created_at`
 Returns a paginated list of posts ordered by newest first.
