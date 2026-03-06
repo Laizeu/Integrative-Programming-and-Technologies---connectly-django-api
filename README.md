@@ -36,7 +36,7 @@ The endpoints were tested using Postman.
 ## Tech Stack
 Backend Framework
 - Django
-- 
+
 API Framework
 - Django REST Framework
 
@@ -76,7 +76,9 @@ Tools
 ## API Endpoints
 
 ## Base
+```test
 - https://127.0.0.1:8000
+```
 ## Users
 ```text
 - GET /posts/users/
@@ -87,15 +89,15 @@ Tools
 ```
 ## Posts
 ```text
-- GET /posts/posts/
-- POST /posts/posts/create/
+- GET /posts/posts/                                   # Retrieve all posts
+- POST /posts/posts/create                            # Create a new post
 ```
 ```bash
 {"content":"Hello this is Laiza's first post!","author":1}
 ```
 ## Likes
 ```text
-- POST  http://127.0.0.1:8000/posts/7/like/            # Like a post
+- POST  /posts/{id}/like/                              # Like a post
 ```
 ## Comments
 ```text
