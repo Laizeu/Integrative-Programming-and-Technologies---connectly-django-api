@@ -34,16 +34,16 @@ The endpoints were tested using Postman.
 - Pagination support for efficient data retrieval
 
 ## Tech Stack
-###Backend Framework
+### Backend Framework
 Django
-###API Framework
+### API Framework
 Django REST Framework
-###Authentication
+### Authentication
 Google OAuth
 Django authentication system
-###Database
+### Database
 SQLite (development)
-###Tools
+### Tools
 Postman (API testing)
 
 ## Setup & Run
@@ -57,16 +57,16 @@ Postman (API testing)
    ```bash
    pip install -r requirements.txt
 4. Run migrations
-Standard server
    ```bash
    python3 manage.py migrate
+5. Start server
+Standard server
+   ```bash
+   python3 manage.py runserver
 HTTPS server
    ``` bash
    python3 manage.py runserver_plus --cert-file cert.pem --key-file key.pem
    ```
-5. Start server
-   ```bash
-   python3 manage.py runserver
 
 ## API Endpoints
 https://127.0.0.1:8000
