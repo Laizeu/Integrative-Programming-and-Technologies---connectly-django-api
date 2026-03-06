@@ -75,11 +75,11 @@ Tools
 
 ## API Endpoints
 
-## Base
+### Base
 ```test
 - https://127.0.0.1:8000
 ```
-## Users
+### Users
 ```text
 - GET /posts/users/
 - POST /posts/users/create/
@@ -87,7 +87,7 @@ Tools
 ```bash
 {"username":"laiza","email":"laiza@example.com"}.
 ```
-## Posts
+### Posts
 ```text
 - GET /posts/posts/                                   # Retrieve all posts
 - POST /posts/posts/create                            # Create a new post
@@ -95,11 +95,11 @@ Tools
 ```bash
 {"content":"Hello this is Laiza's first post!","author":1}
 ```
-## Likes
+### Likes
 ```text
 - POST  /posts/{id}/like/                              # Like a post
 ```
-## Comments
+### Comments
 ```text
 - POST http://127.0.0.1:8000/posts/7/comment/          # Add comment to a post
 - GET http://127.0.0.1:8000/posts/1/comments/          # Retrieve comments for a post
@@ -111,14 +111,14 @@ Tools
   "post": 1
 }
 ```
-## Authentication
+### Authentication
 ```text
 - POST  /api/token/                          # Request authentication token
 - POST  /auth/google/login/                  # Google OAuth login
 - GET   /accounts/google/login/              # Start Google OAuth login
 - GET   /accounts/google/login/callback/     # Google OAuth callback
 ```
-## News Feed
+### News Feed
 ```text
 - GET   /posts/feed/                         # Retrieve personalized news feed
 - GET   /posts/feed/?ordering=-created_at    # Sort posts by newest
