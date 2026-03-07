@@ -92,11 +92,12 @@ Tools
 2. Create & activate virtual environment
    ```bash
    python3 -m venv env
-  Mac
+   ```
+   Mac
    ```bash
    source env/bin/activate
    ```
-  Windows
+   Windows
    ```bash
    .venv\Scripts\activate
    ```
@@ -118,6 +119,9 @@ Tools
    ``` bash
    python3 manage.py runserver_plus --cert-file cert.pem --key-file key.pem
    ```
+   Server will run to:
+   ```
+   http://127.0.0.1:8000/
 
 
 ## API Endpoints
