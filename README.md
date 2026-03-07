@@ -81,17 +81,34 @@ Tools
 
 ## Setup & Run
 1. Clone the repo 
+   ```
+   https://github.com/Laizeu/Integrative-Programming-and-Technologies---connectly-django-api.git
+2. Navigate to the folder
+   ```
+   cd connectly_project
+3. Switch to the Final Project Branch
+   ```
+   git checkout Milestone-2
 2. Create & activate virtual environment
    ```bash
-   cd connectly_project
    python3 -m venv env
+  Mac
+   ```bash
    source env/bin/activate
+   ```
+  Windows
+   ```bash
+   .venv\Scripts\activate
+   ```
 3. Install dependencies
    ```bash
    pip install -r requirements.txt
 4. Run migrations
    ```bash
-   python3 manage.py migrate
+   python manage.py migrate
+5. Create a Superuser (for authentication testing)
+   ```bash
+   python manage.py createsuperuser
 5. Start server
    - Standard server
    ```bash
