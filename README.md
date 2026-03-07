@@ -78,47 +78,30 @@ Tools
 
 ## Setup & Run
 1. Clone the repo 
-   ```
-   https://github.com/Laizeu/Integrative-Programming-and-Technologies---connectly-django-api.git
+   `https://github.com/Laizeu/Integrative-Programming-and-Technologies---connectly-django-api.git`
 2. Navigate to the folder
-   ```
-   cd connectly_project
+   `cd connectly_project`
 3. Switch to the Final Project Branch
-   ```
-   git checkout Milestone-2
+   `git checkout Milestone-2`
 2. Create & activate virtual environment
-   ```bash
-   python3 -m venv env
-   ```
+   `python3 -m venv env`
    Mac
-   ```bash
-   source env/bin/activate
-   ```
+   `source env/bin/activate`
    Windows
-   ```bash
-   .venv\Scripts\activate
-   ```
+   `.venv\Scripts\activate`
 3. Install dependencies
-   ```bash
-   pip install -r requirements.txt
+   `pip install -r requirements.txt`
 4. Run migrations
-   ```bash
-   python manage.py migrate
+   `python manage.py migrate`
 5. Create a Superuser (for authentication testing)
-   ```bash
-   python manage.py createsuperuser
+   `python manage.py createsuperuser`
 5. Start server
-   - Standard server
-   ```bash
-   python3 manage.py runserver
-   ```
-   - HTTPS server
-   ``` bash
-   python3 manage.py runserver_plus --cert-file cert.pem --key-file key.pem
-   ```
+   Standard server
+   `python3 manage.py runserver`
+   HTTPS server
+   `python3 manage.py runserver_plus --cert-file cert.pem --key-file key.pem`
    Server will run to:
-   ```
-   http://127.0.0.1:8000/
+   `http://127.0.0.1:8000/`
 
 
 ## API Endpoints
@@ -273,7 +256,7 @@ Both successful and error scenarios were verified.
 Screenshots and exported Postman collections for the tests can be found here:
 
 Testing Documentation:
-https://drive.google.com/drive/folders/15M2JXmP4iMxHy9ockM1mgprdcnJslNAh?usp=sharing
+`https://drive.google.com/drive/folders/15M2JXmP4iMxHy9ockM1mgprdcnJslNAh?usp=sharing`
 
 Contents include:
 - Postman API request/response screenshots
@@ -320,7 +303,7 @@ connectly_project/
 └── .gitignore                # Ignored files and folders
 ```
 ## Updated Diagrams
-- https://drive.google.com/drive/folders/19loZ9dVJfG5qvpoIXgrr7_g7wR5TU5t-?usp=sharing
+`https://drive.google.com/drive/folders/19loZ9dVJfG5qvpoIXgrr7_g7wR5TU5t-?usp=sharing`
 
 ## Requirements
 
