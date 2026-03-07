@@ -111,8 +111,8 @@ Tools
 
 ### Users
 ```text
-- GET /posts/users/                                 # Retrieve all users
-- POST /posts/users/create/                         # Create a new user
+- GET /posts/users/            # Retrieve all users
+- POST /posts/users/create/    # Create a new user
 ```
 Sample Request Body
 ```json
@@ -129,8 +129,8 @@ Sample Response
 ```
 ### Posts
 ```text
-- GET /posts/posts/                                   # Retrieve all posts
-- POST /posts/posts/create                            # Create a new post
+- GET /posts/posts/              # Retrieve all posts
+- POST /posts/posts/create       # Create a new post
 ```
 Sample Request Body
 ```json
@@ -146,7 +146,7 @@ Sample Response
 ```
 ### Likes
 ```text
-- POST  /posts/{id}/like/                              # Like a post
+- POST  /posts/{id}/like/          # Like a post
 ```
 Sample Response
 ```json
@@ -156,8 +156,8 @@ Sample Response
 ```
 ### Comments
 ```text
-- POST /posts/{id}/comment/      # Add comment to a post
-- GET /posts/{id}/comments/      # Retrieve comments for a post
+- POST /posts/{id}/comment/         # Add comment to a post
+- GET /posts/{id}/comments/         # Retrieve comments for a post
 ```
 Sample Request Body
 ```json
