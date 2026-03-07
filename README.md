@@ -18,13 +18,10 @@ To use the latest version of the project:
 ```bash
 git checkout Milestone-2
 ```
-
-```markdown
 # AI Disclosure Statement
 AI tools (such as ChatGPT) were used to assist with documentation formatting, explanation of concepts, and guidance for testing API endpoints.  
 
 All system design, implementation, testing, and integration of features (CRUD operations, validation, relationships, security, design patterns, likes, comments, Google OAuth, and news feed functionality) were implemented and verified by the project team.
-```
 
 
 ## Project Overview
