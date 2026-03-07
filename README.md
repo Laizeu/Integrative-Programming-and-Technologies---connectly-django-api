@@ -264,30 +264,29 @@ Contents include:
 ## File Structure
 ```text
 connectly_project/
-│
-├── config/                 # Project configuration
+├── config/                   # Django project configuration
 │   ├── __init__.py
 │   ├── settings.py
 │   ├── urls.py
 │   ├── asgi.py
 │   └── wsgi.py
-│
-├── posts/                  # Posts application
+├── posts/                    # Users, posts, likes, comments, and news feed logic
 │   ├── migrations/
-│   │   └── 0001_initial.py
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
-│   ├── models.py           # Post, Like, Comment models
-│   ├── urls.py             # API routes
-│   ├── views.py            # API endpoints logic
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
 │   └── tests.py
-│
-├── env/                    # Virtual environment
-├── db.sqlite3              # SQLite database
-├── requirements.txt
-├── manage.py               # Django management script
-└── README.md
+├── design_patterns/          # Design pattern related files
+├── certs/                    # HTTPS certificate files
+│   ├── cert.pem
+│   └── key.pem
+├── db.sqlite3                # Development database
+├── requirements.txt          # Project dependencies
+├── manage.py                 # Django management script
+├── README.md                 # Project documentation
 ```
 ## Updated Diagrams
 - https://drive.google.com/drive/folders/19loZ9dVJfG5qvpoIXgrr7_g7wR5TU5t-?usp=sharing
