@@ -1,13 +1,20 @@
 # Virtual environment
+env/
+venv/
 .venv/
 
 # Python cache
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
 
 # Django
 db.sqlite3
-media/
+*.sqlite3
+*.pot
+*.pyc
+*.migrations/
 
 # Logs
 *.log
@@ -15,6 +22,11 @@ app.log
 
 # Environment variables
 .env
+
+# Media/uploded files
+media/
+*.pem
+*.key
 
 # Certificates / keys
 *.pem
@@ -29,3 +41,19 @@ client_secret*.json
 
 # VSCode
 .vscode/
+Thumbs.db
+
+# pip logs
+pip-log.txt
+
+# Editor/backup files
+*.py~
+*.swp
+
+# Test/coverage
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Local scripts
+database_cleanup.bat
